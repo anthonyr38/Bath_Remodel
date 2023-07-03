@@ -1,0 +1,44 @@
+﻿@model Product
+
+<h3>@Model.productcode Information</h3>
+
+<table class="table">
+    <tr>
+        <th>idproduct</th>
+        <th>productcode</th>
+        <th>productname</th>
+        <th>finishcode ID</th>
+        <th>stylecode</th>
+        <th>shapecode</th>
+        <th>typecode</th>
+        <th>price</th>
+    </tr>
+
+    
+    
+        <tr>
+            <td>@Model.idproduct</td>
+            <td>@Model.productcode</td>
+            <td>@Model.productname</td>
+            <td>@Model.finishcode</td>
+            <td>@Model.stylecode</td>
+            <td>@Model.shapecode</td>
+            <td>@Model.typecode</td>
+            <td>@Model.price</td>
+        </tr>
+    
+
+</table>
+
+<div style="display: block">
+    <a href="/Product/UpdateProduct/@Model.idproduct">Update Product</a>
+</div>
+
+<div style="display: block">
+
+    @using (Html.BeginForm("DeleteProduct", "Product", "Post"))
+    {
+        <input type="hidden" asp-for="idproduct" value="@Model.idproduct" />
+        <input type="submit" onclick="return confirm('Are you sure?')" value="Delete this product" />
+    }
+</div>

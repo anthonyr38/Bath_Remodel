@@ -20,3 +20,83 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+/*.background {
+    background-clip:border-box;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("\images\showerimage.jpg");
+    justify-self: center;
+    padding: 4%;
+    position: relative;
+}
+    */
+    
+.container-bathrem {
+    display:grid;
+    grid-template-columns: 33% 33% 33%;
+    
+    
+}
+
+
+.topsection{
+    text-align:left;
+}
+
+.nav-item {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.bathrema{
+    
+    text-align:center;
+}
+
+backdiv2 {
+    background-image: url("\images\showerimage.jpg");
+    justify-self: center;
+    padding: 4%;
+    position: relative;
+}
+
+.startbathremod1{
+    text-align:center;
+    
+}
+
+.startbathremod2 {
+    display: grid;
+    row
+    text-align:center;
+    align-content:center;
+    grid-template-columns: 25% 25% 25% 25%;
+
+}
+
+.spacer1{
+    height:70px;
+}
+
+.packhead1{
+    text-align:right
+
+}
+
+.packhead2 {
+    text-align: left
+}
+
+
+.packdiv1 {
+    display: grid;
+    text-align: center;
+    align-content: center;
+    grid-template-columns: 60% 40%;
+}
+
+
+
+
+

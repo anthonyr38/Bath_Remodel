@@ -1,0 +1,46 @@
+﻿@model IEnumerable<Product>
+
+<div>
+
+<div class=spacer1">
+    </div>
+
+<h2 class="packhead1">HERE IS YOUR COMPLETE BATHROOM HARDWARE PACKAGE<br> IN SATIN BRASS</h2>
+
+
+<div class="packdiv1">
+    <div>
+
+<table class="table">
+    <tr>
+        <th>ID</th>        
+        <th>NAME</th>
+        <th>TYPE</th>
+        <th>COST</th>
+    </tr>
+
+ @foreach (var product in @Model)
+    {
+        <tr>
+            <td><a href=/Product/ViewProduct/@product.idproduct>@product.idproduct</a></td>            
+            <td>@product.productname</td>
+            <td>@product.typecode</td>
+            <td>@product.price</td>
+        </tr>
+    }
+
+</table>
+
+    </div>
+    <div>
+        <img src="/images/230-09-004pack.jpg" height="400" width="300" />
+    </div>
+
+</div>
+<div class="spacer1"
+</div>
+<div class="spacer1"
+</div>
+<h3 class="packhead2">THANK YOU FOR USING THE BATH REMODEL ASSISTANT</h3>
+
+</div>

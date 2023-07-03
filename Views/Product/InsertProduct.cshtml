@@ -1,0 +1,37 @@
+﻿@model Product
+
+<h2>Create a New Product</h2>
+
+@using (Html.BeginForm("InsertProductToDatabase", "Product", "Post"))
+{
+    <label asp-for="productcode" class="control-label">productcode</label>
+    <input type="text" name="productcode" class="form-control" value="@Model.productcode" />
+
+    <label asp-for="productname" class="control-label">productname</label>
+    <input type="text" name="productname" class="form-control" value="@Model.productname" />
+
+    <label asp-for="finishcode" class="control-label">finishcode</label>
+    <input type="text" name="finishcode" class="form-control" value="@Model.finishcode" />
+
+    <label asp-for="stylecode" class="control-label">stylecode</label>
+    <input type="text" name="stylecode" class="form-control" value="@Model.stylecode" />
+
+    <label asp-for="shapecode" class="control-label">shapecode</label>
+    <input type="text" name="shapecode" class="form-control" value="@Model.shapecode" />
+
+    <div class="form-group">
+        <label for="">Select a Category</label>
+        <select class="form-control" name="idtype" value="">
+            @foreach (var cat in Model.Categories)
+            {
+                <option value="@cat.idtype">@cat.idtype @cat.typecode</option>
+            }
+        </select>
+    </div>
+
+    <label asp-for="price" class="control-label">price</label>
+    <input type="number" step="0.01" name="price" class="form-control" value="@Model.price" />
+  
+
+    <input type="submit" value="Create Product" class="btn btn-primary" />
+}
